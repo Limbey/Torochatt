@@ -33,9 +33,9 @@ def save_messages(messages):
 
 @app.route("/")
 def home():
-    return redirect(url_for('login'))
+    return redirect(url_for('index.html'))
 
-@app.route("/login", methods=["GET", "POST"])
+@app.route("/index.html", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
         username = request.form['username']
